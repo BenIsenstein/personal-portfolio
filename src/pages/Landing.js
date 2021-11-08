@@ -1,11 +1,9 @@
-import { TitleSection } from '../components'
-import { useState } from 'react'
-import ultralightCopy from 'copy-to-clipboard-ultralight'
-
+import { TitleSection, PersonalIntro } from '../sections'
 
 const Landing = () => {
   return <>
     <TitleSection />
+    <PersonalIntro />
   </>
 }
 

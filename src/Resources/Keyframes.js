@@ -57,6 +57,18 @@ const fadeIn = keyframes`
   }
 `
 
+const personalIntroFadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const copiedMessageSlideUp = keyframes`
   0% {
     opacity: 1;
@@ -77,5 +89,6 @@ export {
   fadeIn, 
   headshotSlideInLeft, 
   titleTextSlideInRight,
-  copiedMessageSlideUp
+  copiedMessageSlideUp,
+  personalIntroFadeIn
 }

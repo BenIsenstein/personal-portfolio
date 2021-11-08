@@ -1,11 +1,13 @@
 import styled, {css} from 'styled-components'
 
 const PageContainer = styled.div`
+    display: flex;
+    flex-direction: column;
     min-height: 90vh;
     margin: 0 0 1.4em 0;
     padding: 1em;
     border-radius: 10px;
-    overflow-x: visible;
+    overflow-x: hidden;
 
     ${props => props.flexColumn && css`
         display: flex;

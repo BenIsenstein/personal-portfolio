@@ -1,0 +1,23 @@
+${deviceMedia.mobileM} {
+    
+}
+
+${deviceMedia.mobileL} {
+  
+}
+
+${deviceMedia.tablet} {
+  
+}
+
+${deviceMedia.laptop} {
+  
+}
+
+${deviceMedia.laptopL} {
+  
+}
+
+${deviceMedia.desktop} {
+  
+} 

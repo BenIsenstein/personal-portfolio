@@ -1,9 +1,8 @@
 import styled from "styled-components"
 import { useState } from 'react'
 import ultralightCopy from 'copy-to-clipboard-ultralight'
-import { useResume } from "."
-import { headshotSlideInLeft, titleTextSlideInRight } from '../Resources'
-import { deviceMedia, copiedMessageSlideUp } from "../Resources"
+import { useResumeModal, NewTabLink } from "../components"
+import { headshotSlideInLeft, titleTextSlideInRight, deviceMedia, copiedMessageSlideUp } from '../resources'
 import BenHeadshot from '../images/HeadshotMay22Cropped.png'
 
 const TitleSectionWrapper = styled.div`
@@ -11,6 +10,7 @@ const TitleSectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-bottom: 4em;
   overflow-x: visible;
 
   ${deviceMedia.tablet} { flex-direction: row; }
@@ -195,8 +195,6 @@ const TitleSectionLinks = styled.div`
   } 
 `
 
-const MyHeadshot = () => <HeadshotContainer src={BenHeadshot} />
-
 const CopiedMessage = styled.div`
   position: absolute;
   align-self: center;
@@ -232,13 +230,9 @@ const CopiedMessage = styled.div`
   } 
 `
 
-const ResumeContainer = styled.div`
-
-`
-
 const TitleSection = () => {
   const [showCopied, setShowCopied] = useState(false)
-  const { ResumeModal, toggleResume } = useResume()
+  const { ResumeModal, toggleResume } = useResumeModal()
 
   const copyEmail = () => {
     if (ultralightCopy('ben.isenstein@gmail.com')) {
@@ -248,7 +242,7 @@ const TitleSection = () => {
   }
 
   return <TitleSectionWrapper>
-    <MyHeadshot />
+    <HeadshotContainer src={BenHeadshot} />
     <TitleTextWrapper>
       <TitleTextBox>
         <Name>Ben Isenstein</Name>
@@ -259,8 +253,8 @@ const TitleSection = () => {
         </PersonalTitles>
         <TitleSectionLinks>
           <p onClick={toggleResume}>Resume</p> <ResumeModal />
-          <a href="https://github.com/BenIsenstein">Github</a>
-          <a href="https://www.linkedin.com/in/benisenstein/">LinkedIn</a>
+          <NewTabLink href="https://github.com/BenIsenstein">Github</NewTabLink>
+          <NewTabLink href="https://www.linkedin.com/in/benisenstein/">LinkedIn</NewTabLink>
           <p onClick={copyEmail}>Email</p>
           {showCopied && <CopiedMessage>Copied</CopiedMessage>}
         </TitleSectionLinks>
@@ -269,4 +263,4 @@ const TitleSection = () => {
   </TitleSectionWrapper>
 }
 
-export { TitleSection, ResumeContainer }
+export { TitleSection }
