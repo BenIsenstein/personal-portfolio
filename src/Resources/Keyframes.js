@@ -30,7 +30,7 @@ const headshotSlideInLeft = keyframes`
   100% {
     
     transform: translateX(0);
-}
+  }
 `
 
 const titleTextSlideInRight = keyframes`
@@ -45,8 +45,64 @@ const titleTextSlideInRight = keyframes`
   100% {
     visibility: visible;
     transform: translateX(0);
-}
+  }
 `
+
+const titleLinkNotifyLaptop = keyframes`
+  0% { 
+    color: antiquewhite;
+    font-size: 1.65em;
+    text-decoration: underline transparent;
+  }
+  50% { 
+    font-size: 1.8em;
+    color: lightblue;
+    text-decoration: underline lightblue;
+  }
+  100% { 
+    color: antiquewhite;
+    font-size: 1.65em;
+    text-decoration: underline transparent;
+  }
+`
+
+const titleLinkNotifyLaptopL = keyframes`
+  0% { 
+    color: antiquewhite;
+    font-size: 1.9em;
+    text-decoration: underline transparent;
+  }
+  50% { 
+    font-size: 2.1em;
+    color: lightblue;
+    text-decoration: underline lightblue;
+  }
+  100% { 
+    color: antiquewhite;
+    font-size: 1.9em;
+    text-decoration: underline transparent;
+  }
+`
+
+const titleLinkNotifyDesktop = keyframes`
+  0% { 
+    color: antiquewhite;
+    font-size: 3.2em;
+    text-decoration: underline transparent;
+  }
+  50% { 
+    font-size: 3.5em;
+    color: lightblue;
+    text-decoration: underline lightblue;
+  }
+  100% { 
+    color: antiquewhite;
+    font-size: 3.2em;
+    text-decoration: underline transparent;
+  
+`
+
+
 
 const fadeIn = keyframes`
   0% {
@@ -89,6 +145,9 @@ export {
   fadeIn, 
   headshotSlideInLeft, 
   titleTextSlideInRight,
+  titleLinkNotifyDesktop,
+  titleLinkNotifyLaptop,
+  titleLinkNotifyLaptopL,
   copiedMessageSlideUp,
   personalIntroFadeIn
 }

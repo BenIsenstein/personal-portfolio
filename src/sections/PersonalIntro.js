@@ -6,7 +6,11 @@ const PersonalIntroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  animation: ${personalIntroFadeIn} 4s;
+  animation: ${personalIntroFadeIn} 4.5s;
+
+  ${deviceMedia.laptop} { 
+    animation: ${personalIntroFadeIn} 5.5s; 
+  }
 `
 
 const PersonalIntroContent = styled.div`

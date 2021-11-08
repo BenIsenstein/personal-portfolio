@@ -2,11 +2,11 @@ import styled from "styled-components"
 import { useState } from 'react'
 import ultralightCopy from 'copy-to-clipboard-ultralight'
 import { useResumeModal, NewTabLink } from "../components"
-import { headshotSlideInLeft, titleTextSlideInRight, deviceMedia, copiedMessageSlideUp } from '../resources'
+import { headshotSlideInLeft, titleTextSlideInRight, deviceMedia, copiedMessageSlideUp, titleLinkNotifyLaptop, titleLinkNotifyLaptopL, titleLinkNotifyDesktop } from '../resources'
 import BenHeadshot from '../images/HeadshotMay22Cropped.png'
 
 const TitleSectionWrapper = styled.div`
-  display: flex;
+  display: flex;Notify
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -156,6 +156,8 @@ const TitleSectionLinks = styled.div`
     }
 
     a,p {
+      animation: ${titleLinkNotifyLaptop} 0.8s;
+      animation-delay: 3s;
       color: antiquewhite;
       font-size: 1.65em;
       text-decoration: underline transparent;
@@ -174,6 +176,8 @@ const TitleSectionLinks = styled.div`
     border-radius: 6px;
 
     a,p { 
+      animation: ${titleLinkNotifyLaptopL} 0.8s;
+      animation-delay: 3s;
       font-size: 1.9em; 
 
       &:hover {
@@ -186,6 +190,8 @@ const TitleSectionLinks = styled.div`
     border-radius: 8px;
 
     a,p { 
+      animation: ${titleLinkNotifyDesktop} 0.8s;
+      animation-delay: 3s;
       font-size: 3.2em; 
 
       &:hover {
