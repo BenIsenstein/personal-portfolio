@@ -4,8 +4,8 @@ const PageContainer = styled.div`
     min-height: 90vh;
     margin: 0 0 1.4em 0;
     padding: 1em;
-    //background-color: ${props => props.theme.bkg};
     border-radius: 10px;
+    overflow-x: visible;
 
     ${props => props.flexColumn && css`
         display: flex;

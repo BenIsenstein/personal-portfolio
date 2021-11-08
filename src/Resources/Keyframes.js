@@ -22,15 +22,60 @@ const slideInBottom = keyframes`
   }
 `
 
-const fadeIn = keyframes`
+const headshotSlideInLeft = keyframes`
   0% {
-      opacity: 0;
+    
+    transform: translateX(-40vw);
   }
   100% {
-      opacity: 1;
+    
+    transform: translateX(0);
+}
+`
+
+const titleTextSlideInRight = keyframes`
+  0% {
+    visibility: hidden;
+    transform: translateX(60vw);
+  }
+  50% {
+    visibility: hidden;
+    transform: translateX(60vw);
+  }
+  100% {
+    visibility: visible;
+    transform: translateX(0);
+}
+`
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 `
 
-//const popup = keyframes``
+const copiedMessageSlideUp = keyframes`
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4em);
+  }
+`
 
-export {slideInTop, slideInBottom, fadeIn}
+export {
+  slideInTop, 
+  slideInBottom, 
+  fadeIn, 
+  headshotSlideInLeft, 
+  titleTextSlideInRight,
+  copiedMessageSlideUp
+}

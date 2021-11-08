@@ -1,15 +1,15 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { PageContainer } from './components'
-import Landing from './Landing'
+import Landing from './pages/Landing'
 
 function App() {
-  return <BrowserRouter>
-    <PageContainer>
+  return <PageContainer>
+    <BrowserRouter>
       <Switch>
         <Route path='/' component={Landing} />
       </Switch>
-    </PageContainer>
-  </BrowserRouter>
+    </BrowserRouter>
+  </PageContainer>
 }
 
-export default App;
+export default App
