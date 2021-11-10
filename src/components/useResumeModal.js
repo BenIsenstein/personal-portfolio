@@ -10,17 +10,11 @@ import resumeUrl from '../images/Ben_Isenstein_Resume.pdf'
 const useResumeModal = () => {
   const { isConfirmModalShowing: isResumeShowing, toggleConfirmModal: toggleResume } = useConfirmModal()
   const [numPages, setNumPages] = useState(null)
-
-  const ResumeContainer = styled.div``
+  
   const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => setNumPages(nextNumPages)
+  const downloadResume = () => fetch(resumeUrl).then(res => getBlobFromStream(res.body)).then(blob => download(blob, 'Ben_Isenstein_Resume.pdf'))
+  const ResumeContainer = styled.div``
 
-  const downloadResume = async () => {
-    const resumeRes = await fetch(resumeUrl) 
-    const resumeBlob = await getBlobFromStream(resumeRes.body)
-    
-    download(resumeBlob, 'Ben_Isenstein_Resume.pdf')
-  }
-    
   const ResumeModal = () => <ConfirmModal
     isConfirmModalShowing={isResumeShowing}
     hideConfirmModal={toggleResume}
@@ -29,12 +23,10 @@ const useResumeModal = () => {
         file={resumeUrl}
         onLoadSuccess={onDocumentLoadSuccess}
       >
-        {
-          Array.from(
-            new Array(numPages),
-            (el, index) => <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-          )
-        }
+        {Array.from(
+          new Array(numPages),
+          (el, index) => <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+        )}
       </Document>
     </ResumeContainer>}
     confirmPrompt='Download'

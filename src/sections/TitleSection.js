@@ -6,7 +6,7 @@ import { headshotSlideInLeft, titleTextSlideInRight, deviceMedia, copiedMessageS
 import BenHeadshot from '../images/HeadshotMay22Cropped.png'
 
 const TitleSectionWrapper = styled.div`
-  display: flex;Notify
+  display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
