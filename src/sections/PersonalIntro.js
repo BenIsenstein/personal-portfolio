@@ -31,6 +31,7 @@ const PersonalIntroContent = styled.div`
   ${deviceMedia.tablet} {
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
     
   }
 
