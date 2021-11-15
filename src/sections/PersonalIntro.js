@@ -1,58 +1,28 @@
 import styled from 'styled-components'
 import { deviceMedia, personalIntroFadeIn } from '../resources'
-import { PhotoGallery, Hr } from '../components'
+import { PhotoGallery, NewSectionWithHr } from '../components'
 
-const PersonalIntroWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+const PersonalIntroWrapper = styled(NewSectionWithHr)`
+  margin-top: 4em;  
+  align-items: center;  
   animation: ${personalIntroFadeIn} 4.5s;
+
+  ${deviceMedia.tablet} {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
   ${deviceMedia.laptop} { 
     animation: ${personalIntroFadeIn} 5.5s; 
   }
 `
 
-const PersonalIntroContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 4em 0 0 0;
-  
-  ${deviceMedia.mobileM} {
-    
-  }
-
-  ${deviceMedia.mobileL} {
-    
-  }
-
-  ${deviceMedia.tablet} {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    
-  }
-
-  ${deviceMedia.laptop} {
-    
-  }
-
-  ${deviceMedia.laptopL} {
-    
-  }
-
-  ${deviceMedia.desktop} {
-    
-  }  
-
-`
-
 const PersonalIntroText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
   width: 100%;
 
 
@@ -65,6 +35,7 @@ const PersonalIntroText = styled.div`
   }
 
   ${deviceMedia.tablet} {
+    margin-bottom: 0;
     width: 50%;
     
   }
@@ -112,16 +83,13 @@ const PersonalIntroParagraph = styled.p`
 
 `
 
-const PersonalIntro = () => <PersonalIntroWrapper>
-  <Hr />  
-  <PersonalIntroContent>
-      <PersonalIntroText>
-        <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
-        <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
-        <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
-      </PersonalIntroText>
-      <PhotoGallery />
-  </PersonalIntroContent>
+const PersonalIntro = () => <PersonalIntroWrapper> 
+  <PersonalIntroText>
+    <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
+    <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
+    <PersonalIntroParagraph>Interests, inspirations, bio. More interests, inspirations, bio.</PersonalIntroParagraph>
+  </PersonalIntroText>
+  <PhotoGallery />
 </PersonalIntroWrapper>
 
 export { PersonalIntro }

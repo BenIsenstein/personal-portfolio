@@ -10,27 +10,24 @@ const TitleSectionWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 4em;
   overflow-x: visible;
 
   ${deviceMedia.tablet} { flex-direction: row; }
 `
 
-const HeadshotContainer = styled.img`
+const Headshot = styled.img`
+  aspect-ratio: 1;
   height: 16em;
-  width: 16em;
   border: 5px solid antiquewhite;
   border-radius: 50%;
   animation: ${headshotSlideInLeft} 2s;
 
   ${deviceMedia.mobileM} {
     height: 18em;
-    width: 18em;
   }
 
   ${deviceMedia.mobileL} {
     height: 20em;
-    width: 20em;
   }
 
   ${deviceMedia.tablet} {
@@ -39,21 +36,16 @@ const HeadshotContainer = styled.img`
 
   ${deviceMedia.laptop} {
     height: 22em;
-    width: 22em;
   }
 
   ${deviceMedia.laptopL} {
-    margin-top: 2em;
-    margin-left: 2em;
+    margin: 2em 0 0 2em;
     height: 28em;
-    width: 28em;
   }
 
   ${deviceMedia.desktop} {
-    margin-top: 4em;
-    margin-left: 4em;
+    margin: 4em 0 0 4em;
     height: 48em;
-    width: 48em;
   }  
 `
 
@@ -248,7 +240,7 @@ const TitleSection = () => {
   }
 
   return <TitleSectionWrapper>
-    <HeadshotContainer src={BenHeadshot} />
+    <Headshot src={BenHeadshot} />
     <TitleTextWrapper>
       <TitleTextBox>
         <Name>Ben Isenstein</Name>
