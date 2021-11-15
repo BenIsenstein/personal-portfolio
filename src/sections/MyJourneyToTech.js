@@ -32,18 +32,18 @@ const JourneyToTechParagraph = styled.p`
 `
 
 const MyJourneyToTech = () => <JourneyToTechWrapper>
-    <SectionHeading>My Journey To Tech</SectionHeading>
-    <InceptionULogo src={inceptionULogoUrl} />
-    <JourneyToTechParagraph>
-        First Paragraph
-    </JourneyToTechParagraph>
-    <RowOfIcons icons={[Mongodb, Express, ReactLogo, Node]} />
-    <JourneyToTechParagraph>
-        Second Paragraph
-    </JourneyToTechParagraph>
-    <JourneyToTechParagraph>
-        Third Paragraph
-    </JourneyToTechParagraph>
+  <SectionHeading>My Journey To Tech</SectionHeading>
+  <InceptionULogo src={inceptionULogoUrl} />
+  <JourneyToTechParagraph>
+      First Paragraph
+  </JourneyToTechParagraph>
+  <RowOfIcons icons={[Mongodb, Express, ReactLogo, Node]} />
+  <JourneyToTechParagraph>
+      Second Paragraph
+  </JourneyToTechParagraph>
+  <JourneyToTechParagraph>
+      Third Paragraph
+  </JourneyToTechParagraph>
 </JourneyToTechWrapper>
 
 

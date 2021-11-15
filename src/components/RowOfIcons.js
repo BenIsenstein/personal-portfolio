@@ -19,19 +19,17 @@ const makeStyledIcon = Icon => styled(props => <Icon {...props} />)`
   ${deviceMedia.desktop} { height: 9em; }    
 `
 
-const RowOfIcons = ({ icons }) => {
-    const RowForIcons = styled.div`
-      display: flex;
-      flex-wrap: wrap;
-      width: clamp(50%, max-content, 80%);
-    `
+const RowForIcons = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
 
-    return <RowForIcons>
-      {icons
-        .map(Icon => makeStyledIcon(Icon))
-        .map(StyledIcon => <StyledIcon key={StyledIcon.name} />)
-      }
-    </RowForIcons>
-}
+const RowOfIcons = ({ icons }) => <RowForIcons>
+  {icons
+    .map(Icon => makeStyledIcon(Icon))
+    .map(StyledIcon => <StyledIcon key={StyledIcon.name} />)
+  }
+</RowForIcons>
+
 
 export { RowOfIcons }
