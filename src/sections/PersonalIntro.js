@@ -3,11 +3,12 @@ import { deviceMedia, personalIntroFadeIn } from '../resources'
 import { PhotoGallery, NewSectionWithHr } from '../components'
 
 const PersonalIntroWrapper = styled(NewSectionWithHr)`
-  margin-top: 4em;  
+  margin-top: 1em;  
   align-items: center;  
   animation: ${personalIntroFadeIn} 4.5s;
 
   ${deviceMedia.tablet} {
+    margin-top: 4em;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;

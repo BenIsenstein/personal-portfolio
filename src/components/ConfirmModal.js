@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Button, FlexSection } from '.'
 
-import './ConfirmModal.css'
+import styles from '../styles/ConfirmModal.css'
 
 // const ConfirmModal = ({ isConfirmModalShowing, hideConfirmModal, modalContent, confirmPrompt, actionOnConfirm, ...props }) => {
 const ConfirmModal = ({ isConfirmModalShowing, hideConfirmModal, modalContent, confirmPrompt, actionOnConfirm, actionOnCancel, ...props }) => {
@@ -12,12 +12,12 @@ const ConfirmModal = ({ isConfirmModalShowing, hideConfirmModal, modalContent, c
     return (
       ReactDOM.createPortal(
       <React.Fragment>
-        <div className="modal-confirm-overlay"/>
-          <div className="modal-confirm-wrapper" aria-modal aria-hidden tabIndex={-1} role="dialog">
-            <div className="modal-confirm">
+        <div className={styles.modalConfirmOverlay}/>
+          <div className={styles.modalConfirmWrapper} aria-modal aria-hidden tabIndex={-1} role="dialog">
+            <div className={styles.modalConfirm}>
               
-              <div className="modal-confirm-header">
-                <button type="button" className="modal-confirm-close-button" data-dismiss="modal" aria-label="Close" onClick={hideConfirmModal}>
+              <div className={styles.modalConfirmHeader}>
+                <button type="button" className={styles.modalConfirmCloseButton} data-dismiss="modal" aria-label="Close" onClick={hideConfirmModal}>
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>

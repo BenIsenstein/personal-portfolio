@@ -1,10 +1,5 @@
-import styled from 'styled-components'
+import styles from '../styles/Hr.module.css'
 
-const Hr = styled.hr`
-  width: 70%;
-  margin: ${props => props.margin || '4em 0 0 0'};
-  align-self: center;
-  border: 1px solid darkslategrey;
-`
+const Hr = () => <hr className={styles.hr} />
 
 export { Hr }

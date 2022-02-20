@@ -3,7 +3,6 @@ import { NewSectionWithHr, SectionHeading, RowOfIcons } from '../components'
 import { deviceMedia, Mongodb, Express, ReactLogo, Node } from '../resources'
 import inceptionULogoUrl from '../images/InceptionULogo.png'
 
-
 const JourneyToTechWrapper = styled(NewSectionWithHr)`
   align-items: center;
 `

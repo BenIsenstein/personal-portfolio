@@ -8,12 +8,12 @@ import { Githubpages } from '@styled-icons/simple-icons/Githubpages'
 import { Visualstudiocode } from '@styled-icons/simple-icons/Visualstudiocode'
 
 export {
-    Mongodb,
-    Express,
-    ReactLogo,
-    Node,
-    Styledcomponents,
-    Github,
-    Githubpages,
-    Visualstudiocode
+  Mongodb,
+  Express,
+  ReactLogo,
+  Node,
+  Styledcomponents,
+  Github,
+  Githubpages,
+  Visualstudiocode
 }

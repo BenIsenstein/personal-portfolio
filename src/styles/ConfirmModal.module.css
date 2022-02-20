@@ -1,4 +1,4 @@
-.modal-confirm-overlay {
+.modalConfirmOverlay {
 position: fixed;
 top: 0;
 left: 0;
@@ -9,7 +9,7 @@ background-color: #000;
 opacity: .5;
 }
 
-.modal-confirm-wrapper {
+.modalConfirmWrapper {
 position: fixed;
 top: 0;
 left: 0;
@@ -21,7 +21,7 @@ overflow-y: auto;
 outline: 0;
 }
 
-.modal-confirm {
+.modalConfirm {
 z-index: 100;
 background: gray;
 position: relative;
@@ -32,12 +32,12 @@ overflow: auto;
 padding: 2em;
 }
 
-.modal-confirm-header {
+.modalConfirmHeader {
 display: flex;
 justify-content: flex-end;
 }
 
-.modal-confirm-close-button {
+.modalConfirmCloseButton {
 font-size: 1.4em;
 font-weight: 700;
 line-height: 1;

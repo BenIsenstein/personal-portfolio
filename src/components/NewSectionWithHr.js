@@ -2,13 +2,13 @@ import styled from 'styled-components'
 import { Hr } from '.'
 
 const NewSectionWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
 `
 
-const NewSectionWithHr = ({ className, children, hrMargin }) => <>
-  <Hr margin={hrMargin} />
+const NewSectionWithHr = ({ className, children }) => <>
+  <Hr />
   <NewSectionWrapper className={className}>
     {children}
   </NewSectionWrapper>

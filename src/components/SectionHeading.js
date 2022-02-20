@@ -1,7 +1,9 @@
-import styled from 'styled-components'
+import styles from '../styles/SectionHeading.module.css'
 
-const SectionHeading = styled.h2`
-
-`
+const SectionHeading = ({ children }) => (
+  <h2 className={styles.sectionHeading}>
+    {children}
+  </h2>
+)
 
 export { SectionHeading }

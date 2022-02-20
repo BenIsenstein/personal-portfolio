@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { deviceMedia } from '../resources'
+import styles from '../styles/RowOfIcons.module.css'
 
 const makeStyledIcon = Icon => styled(props => <Icon {...props} />)`
   aspect-ratio: 1;
@@ -19,17 +20,11 @@ const makeStyledIcon = Icon => styled(props => <Icon {...props} />)`
   ${deviceMedia.desktop} { height: 9em; }    
 `
 
-const RowForIcons = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const RowOfIcons = ({ icons }) => <RowForIcons>
+const RowOfIcons = ({ icons }) => <div className={styles.rowForIcons}>
   {icons
     .map(Icon => makeStyledIcon(Icon))
     .map(StyledIcon => <StyledIcon key={StyledIcon.name} />)
   }
-</RowForIcons>
-
+</div>
 
 export { RowOfIcons }
